@@ -1,0 +1,44 @@
+﻿@page "{id:int}"
+@model My_Second_Website.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Rediger - @Model.Customer.Id</h2>
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <input asp-for="Customer.Id" type="hidden" />
+    <div>
+        <label asp-for="Customer.Id"></label>
+        <div>
+            <input asp-for="Customer.Id" />
+            <span asp-validation-for="Customer.Id"></span>
+        </div>
+    </div>
+    <div>
+        <label asp-for="Customer.Name"></label>
+        <div>
+            <input asp-for="Customer.Name"/>
+            <span asp-validation-for="Customer.Name"></span>
+        </div>
+    </div>
+    <div>
+        <label asp-for="Customer.LastName"></label>
+        <div>
+            <input asp-for="Customer.LastName" />
+            <span asp-validation-for="Customer.LastName"></span>
+        </div>
+    </div>
+    <div>
+        <label asp-for="Customer.Mail"></label>
+        <div>
+            <input asp-for="Customer.Mail" />
+            <span asp-validation-for="Customer.Mail"></span>
+        </div>
+    </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+
