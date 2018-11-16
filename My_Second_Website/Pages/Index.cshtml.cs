@@ -16,6 +16,9 @@ namespace My_Second_Website.Pages
 
 		public IList<Customer> Customers { get; private set; }
 
+		[TempData] /* Catch tempdata from create model!*/
+		public string Message { get; set; }
+
 		public async Task OnGetAsync()
 		{
 			Customers = await _db.Customers.AsNoTracking().ToListAsync();

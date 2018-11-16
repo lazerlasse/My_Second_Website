@@ -19,6 +19,7 @@ namespace My_Second_Website
 
 		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
 			WebHost.CreateDefaultBuilder(args)
+                .UseApplicationInsights()
 				.UseStartup<Startup>();
 	}
 }

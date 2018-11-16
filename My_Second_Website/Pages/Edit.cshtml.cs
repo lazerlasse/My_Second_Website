@@ -40,7 +40,7 @@ namespace My_Second_Website.Pages
 			{
 				await _db.SaveChangesAsync();
 			}
-			catch (Exception ex)
+			catch (DbUpdateConcurrencyException ex)
 			{
 
 				throw new Exception($"Customer {Customer.Id} Not Found",  ex);
